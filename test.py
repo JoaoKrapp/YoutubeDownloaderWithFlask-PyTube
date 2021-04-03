@@ -4,7 +4,7 @@ import os
 import os.path
 from pathlib import Path
 
-link = str(input("URL do video vadia: "))
+link = str(input("URL do video: "))
 video = YouTube(link)
 stream = video.streams.get_highest_resolution()
 #Deixar o nome bunito
