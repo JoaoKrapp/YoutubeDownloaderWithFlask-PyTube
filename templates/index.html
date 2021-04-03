@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Home</title>
+{% endblock %}
+
+{% block body %}
+<h1>Youtube Video Downloader</h1>
+<form action="#" method="POST"> 
+    <div class="mb-3">
+        <label for="exampleInputUrl1" class="form-label">Url:</label>
+        <input name="urlpoura" type="text" class="form-control">
+    </div>
+    <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+</form>
+    {% with messages = get_flashed_messages() %}
+        {% if messages%}
+            {% for msg in messages %}
+                <p>{{msg}}</p>
+            {% endfor%}
+        {% endif%}
+    {% endwith %}
+
+{% endblock %}
