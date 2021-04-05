@@ -16,7 +16,7 @@ def home():
     if request.method == "POST":
         verificar()
         
-        url = request.form["urlpoura"]
+        url = request.form["url"]
 
         video = YouTube(url)
         stream = video.streams.get_highest_resolution()
